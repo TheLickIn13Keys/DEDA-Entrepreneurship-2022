@@ -10,31 +10,28 @@ class Amazon(Resource):
         prexisting = request.args.get('prexisting')
         
         products = {
-            "carpal": ['Product', 'https://www.amazon.com/', "True"], 
-            "bursitis": ['Product', 'https://www.amazon.com/', "False"],
-            "tendonitis": ['Product', 'https://www.amazon.com/', "True"]
+            "carpal": ['https://amz.run/5bs4', 'https://amz.run/5bs6', 'https://amz.run/5bs7'], 
+            "bursitis": ['https://amz.run/5brw', 'https://amz.run/5brx'],
+            "tendonitis": ['https://amz.run/5bs8', 'https://amz.run/5brx'],
         }
         
         foundProdUrls = []
         
         
-        for key, value in products.items():  
-            if(injury == key):
-                if(prexisting == value[2]):
-                    foundProdUrls.append(value[1])
+        for key in products:  
+            if(key == injury):
+                for link in products.get(key):
+                    foundProdUrls.append(link)
 
-        
-    
-        
 
         
         data = {
-            'injury': injury,
-            'prexisting': prexisting,
+            # 'injury': injury,
+            # 'prexisting': prexisting,
             'products': foundProdUrls
         }
     
         
-        return jsonify({'data': data})
+        return jsonify(foundProdUrls)
 
         

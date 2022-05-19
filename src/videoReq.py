@@ -30,10 +30,10 @@ class VideoReq(Resource):
 
         
         data = {
-            'injury': injury,
-            'prexisting': prexisting,
-            'videos': foundVidUrls
+            # 'injury': injury,
+            # 'prexisting': prexisting,
+            'videos: ': foundVidUrls
         }
     
         
-        return jsonify({'data': data})
+        return jsonify(foundVidUrls)
