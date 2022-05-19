@@ -10,9 +10,9 @@ class Amazon(Resource):
         prexisting = request.args.get('prexisting')
         
         products = {
-            "carpal": ['Product', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', "True"], 
-            "bursitis": ['Product', 'https://www.youtube.com/watch?v=dQw4w9WgXcR', "False"],
-            "tendonitis": ['Product', 'https://www.youtube.com/watch?v=dQw4w9WgXcT', "True"]
+            "carpal": ['Product', 'https://www.amazon.com/', "True"], 
+            "bursitis": ['Product', 'https://www.amazon.com/', "False"],
+            "tendonitis": ['Product', 'https://www.amazon.com/', "True"]
         }
         
         foundProdUrls = []
