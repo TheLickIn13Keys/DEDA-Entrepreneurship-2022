@@ -11,9 +11,9 @@ class VideoReq(Resource):
 
         
         videos = {
-            "carpal": ['Video', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', "True"], 
-            "bursitis": ['Video', 'https://www.youtube.com/watch?v=dQw4w9WgXcR', "False"],
-            "tendonitis": ['Video', 'https://www.youtube.com/watch?v=dQw4w9WgXcT', "True"]
+            "carpal": ['Video', 'https://youtu.be/FoKUWlKK_Vc', "True"], 
+            "bursitis": ['Video', 'https://youtu.be/Ur7axZifTNw', "True"],
+            "tendonitis": ['Video', 'https://youtu.be/p1Ic7ArQgiA', "True"]
         }
         
         foundVidUrls = []
